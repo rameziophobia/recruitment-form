@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="apec.js"></script>
+    <title>Apec Form</title>
+</head>
+
+<body class="body">
+    <div class="image-container">
+        <img class="logo-img" src="./images/logo1.png" alt="Apec_logo1" id="rotatingLogo">
+        <img class="logo-img" src="./images/logo2.png" alt="Apec_logo2">
+    </div>
+    
+    <div class="progress-bar">
+        <button type="button" class="pageHeader" id="page1header" onclick="onPageHeaderClick(0)">1</button>
+        <button type="button" class="pageHeader" id="page2header" onclick="onPageHeaderClick(1)">2</button>
+        <button type="button" class="pageHeader" id="page3header" onclick="onPageHeaderClick(2)">3</button>
+    </div>
+
+    <h1>APEC'21</h1>
+    <h2>RECRUITMENT</h2>
+    <form class="form" id="formId">
+        <div class="form-page active" id="page1">
+            <div class="form-question">
+                <label for="name">Name</label>
+                <input required class="page-content"  type="text" id="name">
+            </div>
+
+            
+            <div class="form-question">
+                <label for="mobileNumber">Mobile Number</label>
+                <input required class="page-content"  type="tel" id="mobileNumber" name="mobileNumber" class="text-input" pattern="^(\+2)?01[0125][0-9]{8}$">
+            </div>
+
+            <div class="form-question">
+                <label for="email">Email address</label>
+                <input required class="page-content"  type="text" id="email" name="email" size="50">        
+            </div>
+
+            <div class="form-question">
+                <label for="university">University</label>
+                <select required class="page-content"  id="university" name="university">
+                    <option value="Cairo">Cairo</option>
+                    <option value="Ain Shams">Ain Shams</option>
+                    <option value="Helwan">Helwan</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="faculty">Faculty</label>
+                <select required class="page-content"  id="faculty" name="faculty">
+                    <option value="Engineering">Engineering</option>
+                    <option value="Medicine">Medicine</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Mass Communication">Mass Communication</option>
+                    <option value="Computer Science">Computer Science</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="academicYear">Academic Year</label>
+                <select required class="page-content"  id="academicYear" name="academicYear">
+                    <option value="Freshman">Freshman</option>
+                    <option value="1st">1<sup>st</sup></option>
+                    <option value="2nd">2<sup>nd</sup></option>
+                    <option value="3rd">3<sup>rd</sup></option>
+                    <option value="4th">4<sup>th</sup></option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="preference1">1<sup>st</sup> preference</label>
+                <select required class="page-content"  id="preference1" name="preference1">
+                    <option value="public relations">public relations</option>
+                    <option value="human resources">human resources</option>
+                    <option value="information technology">information technology</option>
+                    <option value="management">management</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="preference2">2<sup>nd</sup> preference</label>
+                <select required class="page-content"  id="preference2" name="preference2">
+                    <option value="public relations">public relations</option>
+                    <option value="human resources">human resources</option>
+                    <option value="information technology">information technology</option>
+                    <option value="management">management</option>
+                </select>
+            </div>
+
+            <div class="form-question">
+                <label for="previousExperience">previous experiences</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="previousExperience" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+
+            <button type="button" onclick="previousSection()">Back</button>
+            <button type="button" onclick="nextSection()">Next</button>
+        </div>
+
+
+        <div class="form-page" id="page2">
+
+            <div class="form-question">
+                <label for="whyApec">Why choosing APEC?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="whyApec" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+
+            <div class="form-question">
+                <label for="hearApec">How did you hear about APEC’s recruitment?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="hearApec" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+            <div class="form-question">
+                <label for="whyPreferences">Why did you choose your 1st and 2nd preferences?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="whyPreferences" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+            <div class="form-question">
+                <label for="preferencePercentages">What percentage do you prefer your 1st to 2nd preferences? (I.e. 70:30 in favor
+                    of 1st preference)</label>
+                <input required class="page-content shortText"  type="text" id="preferencePercentages" size="2" maxlength="2" placeholder="00"> :
+                <input required class="page-content shortText"  type="text" id="preferencePercentages2" size="2" maxlength="2" placeholder="00"> 
+            </div>
+            <div class="form-question">
+                <label for="expectations">If you are accepted, what are your expectations from the year?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="expectations" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+            <div class="form-question">
+                <label for="improveSkills">What personal skills would you like to improve by the end of the year?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="improveSkills" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>   
+            
+            <button type="button" onclick="previousSection()">Back</button>
+            <button type="button" onclick="nextSection()">Next</button>         
+        </div>
+
+        <div class="form-page" id="page3">
+            <div class="form-question">
+                <label>Do you prefer working in a team or alone?</label>
+                <div class="radioContainer">
+                    <input required class="page-content radio"  type="radio" id="Team" name="teamAloneRadio" value="Team">
+                    <label for="Team" class="radio">Team</label>
+                    <input required class="page-content radio"  type="radio" id="Alone" name="teamAloneRadio" value="Alone">
+                    <label for="Alone" class="radio">Alone</label>
+                </div>
+            </div>
+            <div class="form-question">
+                <label for="daySchedule">How do you schedule your day?</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="daySchedule" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+            <div class="form-question">
+                <label for="selfLearning">State a time in which you learned something by yourself. (I.e. not necessarily
+                    Academic)</label>
+                <textarea required class="page-content"  rows="4" cols="50" id="selfLearning" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+            <div class="form-question">
+                <label for="leaderRadio">Do you prefer being a leader? Explain your answer:</label>
+                <div class="radioContainer">
+                    <input required class="page-content radio"  type="radio" id="YesLeader" name="leaderRadio" value="Yes">
+                    <label for="YesLeader" class="radio">Yes</label>
+                    <input required class="page-content radio"  type="radio" id="NoLeader" name="leaderRadio" value="No">
+                    <label for="NoLeader" class="radio">No</label>
+                </div>
+                <textarea required class="page-content"  rows="4" cols="50" id="leaderTextArea" class="form-text-area" placeholder="Answer here..."></textarea>
+            </div>
+
+            <button type="button" onclick="previousSection()">Back</button>
+            <button type="submit" onclick="nextSection()">Next</button>
+        </div>
+    </form>    
+</body>    
+</html>

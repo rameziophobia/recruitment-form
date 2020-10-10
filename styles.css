@@ -1,0 +1,158 @@
+.img-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.logo-img {
+    height: 80px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#rotatingLogo {
+    -webkit-animation:spin 10s linear infinite;
+    -moz-animation:spin 10s linear infinite;
+    animation:spin 10s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+.progress-bar {
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;   
+    font-size: 150%;
+    color: rgb(255, 245, 245);
+}
+
+.progress-bar > * {
+    border-radius: 5px 20px 5px;
+    border: 2px solid rgb(255, 245, 245);
+    margin: 60px 60px;
+    padding: 4px 15px;
+}
+
+#page1header {
+    border-color:  rgb(240, 84, 84);
+}
+
+h1, h2 {
+    font-weight: 600;   
+    font-size: 300%;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: rgb(255, 245, 245);
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    color: rgb(240, 84, 84);
+}
+
+.form-text-area {
+    resize: none
+}
+
+.text-input {
+    size: 50
+}
+
+.form > * {
+    width: 100%;
+    margin: 5px 5px;
+
+}
+
+.form-question {
+    margin: 15px 0px 30px 50px;
+}
+
+.form-question >  label, input, select, textarea {
+    width: 95%;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: 0.07em;
+    color: #ddd;
+    background: none;
+    resize: none;
+}
+
+button{
+    width: 49%;
+    font-weight: 600;
+    margin-top: 10px;
+    letter-spacing: 0.07em;
+    color: #ddd;
+    border-color: rgb(53, 18, 18);
+    border-width: 1px;
+    background: rgb(97, 19, 19);
+    padding: 5px;
+}
+
+
+.form-question > input, select, textarea{
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 7px;
+}
+
+
+textarea::placeholder {
+    color:  rgb(161, 161, 161);
+    font-style: italic;
+}
+
+.form-page {
+    width: 1000px;
+    align-items: center;
+    align-content: center;
+    background: rgba(200, 200, 200, 0.28);
+    padding: 20px;
+    border: 10px;
+    border-radius: 35px;
+}
+
+#page2, #page3 {
+    display: none;
+}
+
+.radioContainer {
+    width: auto;
+}
+
+.radioContainer > .radio {
+    width: auto;
+    color: #ddd;
+    margin: 5px 5px;
+}
+
+.shortText {
+    width: auto;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #333333 10%, #5f0b0b 80%, #8b1313 90%);
+    background-attachment: fixed;
+    font-family:    -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.invalid-input-warning {
+    font-weight: 700;
+    border-radius: 15px;
+    border: 5px solid rgb(158, 61, 61);
+    margin: 5px 0px;
+    padding: 4px 15px;
+    width: fit-content;
+    background: rgb(97, 19, 19);
+    color: rgb(255, 236, 236);
+}
